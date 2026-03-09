@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@layer {
+  .container {
+    @apply max-w-[1190px] w-[100%] px-[10px] mx-auto;
+  }
+
+  .flexes {
+    @apply flex items-center;
+  }
+  .link-hover {
+    @apply text-[#888888];
+  }
+}
