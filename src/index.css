@@ -1,14 +1,72 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
 
-@layer {
+:root {
+  --page: #f8f8f8;
+  --surface: #ffffff;
+  --section: #f5f5f5;
+  --soft: #fdecef;
+  --topbar: #fff7f8;
+  --border: #ededed;
+  --card-border: #f1f1f1;
+  --text-main: #303030;
+  --muted: #777777;
+  --accent: #e61d4d;
+  --accent-strong: #cf143f;
+  --pink: #ec7e97;
+  --highlight: #f4c3ce;
+  --line: #757575;
+}
+
+:root[data-theme='dark'] {
+  --page: #0f1117;
+  --surface: #161a22;
+  --section: #11151d;
+  --soft: #231822;
+  --topbar: #15111a;
+  --border: #262b35;
+  --card-border: #242a34;
+  --text-main: #f3f4f6;
+  --muted: #afb4bf;
+  --accent: #ff3d69;
+  --accent-strong: #ff2b59;
+  --pink: #ff9db2;
+  --highlight: rgba(255, 157, 178, 0.4);
+  --line: #5e6470;
+}
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: var(--page);
+    color: var(--text-main);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  button,
+  input {
+    font: inherit;
+  }
+}
+
+@layer components {
   .container {
-    @apply max-w-[1190px] w-[100%] px-[10px] mx-auto;
-  }
-
-  .flexes {
-    @apply flex items-center;
-  }
-  .link-hover {
-    @apply text-[#888888];
+    @apply mx-auto w-full max-w-[1190px] px-[10px];
   }
 }
